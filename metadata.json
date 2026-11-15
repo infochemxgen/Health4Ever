@@ -1,0 +1,6 @@
+{
+  "name": "Health4Ever OS",
+  "description": "Autonomous biometric apparel command center combining biodegradable conductive bio-yarns, passive TENG energy harvesting, and NASA HRP physiological risk telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
