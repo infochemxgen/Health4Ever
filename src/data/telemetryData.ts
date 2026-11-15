@@ -1,3 +1,6 @@
+import baselineTeeImg from '../assets/images/garment_baseline_tee_1794771301003.jpg';
+import thermoOuterwearImg from '../assets/images/garment_thermo_outerwear_1794771301300.jpg';
+import recoveryTightsImg from '../assets/images/garment_recovery_leggings_1794771301770.jpg';
 import { CapsuleProduct, GarmentItem } from '../types/health4ever';
 
 export const INITIAL_GARMENTS: GarmentItem[] = [
@@ -6,7 +9,7 @@ export const INITIAL_GARMENTS: GarmentItem[] = [
     name: 'Everyday Baseline Tee',
     category: 'Upper Torso Bio-Layer',
     sku: 'H4E-BT-014',
-    imageUrl: '/src/assets/images/garment_baseline_tee_1794771301003.jpg',
+    imageUrl: baselineTeeImg,
     composition: 'Organic Belgian Flax · Tencel Lyocell · Carbon-Nanotube Bio-Yarn',
     sensorZones: ['Thoracic Thermistor Grid', 'Sweat Electrolyte Lattice', 'Scapular TENG Flex'],
     thermalResistanceClo: 0.35,
@@ -23,7 +26,7 @@ export const INITIAL_GARMENTS: GarmentItem[] = [
     name: 'Active Thermoregulation Jacket',
     category: 'Outer Climate Shell',
     sku: 'H4E-TJ-082',
-    imageUrl: '/src/assets/images/garment_thermo_outerwear_1794771301300.jpg',
+    imageUrl: thermoOuterwearImg,
     composition: 'Waxed Organic Flax · Tencel · Articulated Triboelectric Weave',
     sensorZones: ['Deltoid TENG Harvester', 'Spinal Microclimate Array', 'Cuff Pulse Bridge'],
     thermalResistanceClo: 0.65,
@@ -40,7 +43,7 @@ export const INITIAL_GARMENTS: GarmentItem[] = [
     name: 'Biometric Recovery Tights',
     category: 'Lower Kinetic Compression',
     sku: 'H4E-RT-209',
-    imageUrl: '/src/assets/images/garment_recovery_leggings_1794771301770.jpg',
+    imageUrl: recoveryTightsImg,
     composition: 'Tencel Knit · Fine Flax · Quadriceps Carbon-Yarn sEMG Matrix',
     sensorZones: ['Quadriceps sEMG Grid', 'Gastrocnemius Fatigue Sensor', 'Patellar TENG Zone'],
     thermalResistanceClo: 0.45,
@@ -60,7 +63,7 @@ export const CAPSULE_PRODUCTS: CapsuleProduct[] = [
     name: 'Everyday Baseline Tee',
     subtitle: 'Continuous thermal, sweat electrolyte, and GSR sensing in a breathable flax knit.',
     category: 'Core Capsule',
-    imageUrl: '/src/assets/images/garment_baseline_tee_1794771301003.jpg',
+    imageUrl: baselineTeeImg,
     biodegradablePct: 97,
     sensorsIncluded: 'Core Temp · Sweat Hydration · Scapular TENG',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
@@ -70,7 +73,7 @@ export const CAPSULE_PRODUCTS: CapsuleProduct[] = [
     name: 'Active Thermoregulation Jacket',
     subtitle: 'High-motion shoulder and elbow TENG weave powers environmental heat-load telemetry passively.',
     category: 'Outerwear Capsule',
-    imageUrl: '/src/assets/images/garment_thermo_outerwear_1794771301300.jpg',
+    imageUrl: thermoOuterwearImg,
     biodegradablePct: 96,
     sensorsIncluded: 'Microclimate Temp · Dual TENG · Moisture Vapor Flux',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
@@ -80,7 +83,7 @@ export const CAPSULE_PRODUCTS: CapsuleProduct[] = [
     name: 'Biometric Recovery Tights',
     subtitle: 'Woven carbon-nanotube sEMG matrices track muscular fatigue without rigid pods.',
     category: 'Endurance Capsule',
-    imageUrl: '/src/assets/images/garment_recovery_leggings_1794771301770.jpg',
+    imageUrl: recoveryTightsImg,
     biodegradablePct: 95,
     sensorsIncluded: 'Quad & Calf sEMG · Patellar TENG · Skin Temp',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
