@@ -3,6 +3,7 @@ import { ExternalLink, RefreshCw, Search } from 'lucide-react';
 import { SPACE_AGENCY_LIST, SPACE_AGENCY_PROFILES } from '../data/spaceAgencyData';
 import { TEXTILE_LAYERS } from '../data/telemetryData';
 import { SpaceAgencyId, SpaceSourcesApiResponse } from '../types/health4ever';
+import { fetchSpaceSourcesResilient } from '../utils/directApiFallback';
 
 interface NasaHrpLabViewProps {
   agencyId: SpaceAgencyId;
@@ -29,11 +30,7 @@ export function NasaHrpLabView({ agencyId, onChangeAgency }: NasaHrpLabViewProps
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/space-sources?q=${encodeURIComponent(query)}`);
-      if (!res.ok) {
-        throw new Error(`Server returned HTTP ${res.status}`);
-      }
-      const json = (await res.json()) as SpaceSourcesApiResponse;
+      const json = await fetchSpaceSourcesResilient(query);
       setSpaceData(json);
     } catch (err) {
       setError(

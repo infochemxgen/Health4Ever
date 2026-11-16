@@ -7,6 +7,7 @@ import { NasaHrpLabView } from './components/NasaHrpLabView';
 import { WardrobeManagerView } from './components/WardrobeManagerView';
 import { MONITORING_STATIONS } from './data/spaceAgencyData';
 import { INITIAL_GARMENTS } from './data/telemetryData';
+import { fetchEnvironmentResilient } from './utils/directApiFallback';
 import {
   AppView,
   BioStatus,
@@ -67,13 +68,7 @@ export default function App() {
     setEnvLoading(true);
     setEnvError(null);
     try {
-      const res = await fetch(
-        `/api/environment?lat=${station.lat}&lon=${station.lon}`
-      );
-      if (!res.ok) {
-        throw new Error(`Environmental API returned HTTP ${res.status}`);
-      }
-      const json = (await res.json()) as EnvironmentApiResponse;
+      const json = await fetchEnvironmentResilient(station.lat, station.lon);
       setEnvData(json);
     } catch (err) {
       setEnvError(
